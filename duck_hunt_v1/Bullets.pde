@@ -1,9 +1,10 @@
 class Bullets extends HUD {
 
-  Bullets(int s, int d, int b, int r) {
-    super(s, d, b, r);
+  Bullets(int _b) {
+    bullets = _b;
   }
-  void display(int _bu) {
+  void updateBullets(int _bu) {
+    
     stroke(130, 160, 0);
     switch(_bu) {
     case 6:
@@ -19,7 +20,6 @@ class Bullets extends HUD {
       rect(50, 545, 2, 12);
       break;
     case 0:
-
       break;
     }
   }

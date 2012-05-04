@@ -5,7 +5,7 @@ boolean dogDown = false;
 
 
 public int dogWalk() {
-  int s = 1;
+  int s;
   background(0);
   dogX += 1;
   ellipse(dogX, dogY, 50, 50);
@@ -13,10 +13,9 @@ public int dogWalk() {
   if (dogX > 340) {
     dogX = 2000; 
     dogY = 2000;
-    s = 2;
-    return s;
+    return s = 2;
   }
-  return s;
+  return s = 1;
 }
 
 public void dogSmile() {

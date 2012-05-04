@@ -1,11 +1,19 @@
-class Score extends HUD{
-  
-  Score(int s, int d,int b, int r){
-    super(s, d, b, r);
+class Score extends HUD {
+
+  Score(int _s) {
+    score = _s;
   }
-  void display(int s){
-    fill(255);
-    String score = ""+s;
-    text(score, 590, 550);
+  void updateScore(boolean _active) {
+    if (_active) {
+      score += 500;
+      fill(255);
+      String textScore = ""+score;
+      text(textScore, 590, 550);
+    }else{
+      fill(255);
+      String textScore = ""+score;
+      text(textScore, 590, 550);
+    }
   }
 }
+

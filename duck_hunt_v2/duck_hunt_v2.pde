@@ -9,7 +9,7 @@ Bullets bullets;
 Rounds rounds;
 
 //duck
-DuckControl d;
+Duck d;
 
 //bullet
 int bu = 6;
@@ -32,7 +32,7 @@ void setup() {
   bullets = new Bullets(bu);
   rounds = new Rounds(0);
   //duck
-  d= new DuckControl();
+  d= new Duck();
 
   size(800, 600);
   //starting state
@@ -77,7 +77,7 @@ void draw() {
     //duck fly, gun shot, if got it, duck drop, else "duck fly away".
     //dog appear, laugh or grab the duck and then update score, bullet and ducks
     //if bu <= 0 , "duck fly away"..., if ducks <= 0 , go to state "assess"*/
-    d.fly();
+    d.duckFly();
     //hud.updateBullets(bu);
     ducks.updateDucks(2);
     score.updateScore(false);
